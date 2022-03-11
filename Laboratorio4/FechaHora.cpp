@@ -110,15 +110,15 @@ String obtenerFechaHora() {
   // DateTime y asigna a variable fecha
   SfechaHora += fecha.year();
   SfechaHora += "-";
-  SfechaHora += fecha.month();
+  SfechaHora = fecha.month() >= 10 ? SfechaHora + fecha.month() : SfechaHora + "0" + fecha.month() ;
   SfechaHora += "-";
-  SfechaHora += fecha.day();
+  SfechaHora = fecha.day() >= 10 ? SfechaHora + fecha.day() : SfechaHora + "0" + fecha.day() ;
   SfechaHora += "T";
-  SfechaHora += fecha.hour();
+  SfechaHora = fecha.hour() >= 10 ? SfechaHora + fecha.hour() : SfechaHora + "0" + fecha.hour() ;
   SfechaHora += ":";
-  SfechaHora += fecha.minute();
+  SfechaHora = fecha.minute() >= 10 ? SfechaHora + fecha.minute() : SfechaHora + "0" + fecha.minute();
   SfechaHora += ":";
-  SfechaHora += fecha.second();
+  SfechaHora = fecha.second() >= 10 ? SfechaHora + fecha.second() : SfechaHora + "0" + fecha.second();
   SfechaHora += "Z";
   Serial.print(fecha.year());     // funcion que obtiene el dia de la fecha completa
   Serial.print("-");       // caracter barra como separador

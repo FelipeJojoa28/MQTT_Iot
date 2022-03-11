@@ -1,7 +1,7 @@
 #include <WiFi.h>
 //Red WiFi
-const char *ssid = "";   // Nombre de la red WiFi
-const char *password = "";        // WiFi password
+const char *ssid = "PC 8149";   // Nombre de la red WiFi
+const char *password = "EstacionIot";        // WiFi password
 
 void conexionWiFi()  {
   WiFi.begin(ssid, password);

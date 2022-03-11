@@ -8,7 +8,7 @@ PubSubClient client(espClient); //  protocolo MQTT
 // MQTT Broker
 const char *mqtt_broker = "test.mosquitto.org"; // Direccion del servidor del broker
 const char *mqtt_name = "esp32Client";          // Nombre del dispositivo
-const char *topic = "sensores/potenciometro";   // Tópico en el que se publican los datos
+const char *topic = "LAB4Unicauca/Arduino";   // Tópico en el que se publican los datos
 const int mqtt_port = 1883;                     // Puerto por defecto para MQTT
 
 void callback(char *topic, byte *payload, unsigned int length) {

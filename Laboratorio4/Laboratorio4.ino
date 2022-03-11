@@ -1,3 +1,10 @@
+/* Autores:
+ *   Andrés Felipe Jojoa Gómez
+ *   Deiby Zair Melo Olivar
+ *   Laura Muñoz Muñoz
+ *   Juan Camilo Otero Velasco
+ */
+
 #include "conexionWiFi.h"
 #include "conexionMQTT.h"
 #include "persistencia.h"
@@ -7,7 +14,7 @@
 #define pin_sensor 35   // Pin analogico de entrada
 #define N 10                   // Período de envío de datos en s
 
-float latitude = 0, longitude = 0; // para obtener la latitug y longitud del GPS
+float latitude = 2.4455532, longitude = -76.598177; // para obtener la latitug y longitud del GPS
 
 unsigned long currentMillis = 0;    // Tiempo de ejecucion actual del programa
 unsigned long previousMillis = 0;   // Tiempo de ejecucion en el que se enviaron los ultimos datos
@@ -61,6 +68,6 @@ float promedio() // Funcion para obtener el valor promedio del vector de muestra
   float voltaje = map(promedio, 0, 4095, 0, 3300); // Conversión a
   voltaje /= 1000.0;                               //   voltaje
   
-  float temp = (voltaje - 0.43) * 100; //Conversión a variable deseada
+  float temp = (voltaje - 0.41) * 100; //Conversión a variable deseada
   return temp;
 }
